@@ -7,6 +7,7 @@
  */
 
 import React, {Component} from 'react';
+
 import {
   NativeEventEmitter,
   SafeAreaView,
@@ -22,28 +23,6 @@ import {Colors} from 'react-native/Libraries/NewAppScreen';
 
 import XEShopSDK from 'react-native-xiaoe-sdk';
 
-const App = () =>{
-  return <>
-  <StatusBar barStyle="dark-content" />
-      <SafeAreaView>
-        <ScrollView
-          contentInsetAdjustmentBehavior="automatic"
-          style={styles.scrollView}>
-          <View style={styles.body}>
-            <Header />
-            <XEShopSDKDemo />
-          </View>
-        </ScrollView>
-      </SafeAreaView>
-      </>
-}
-
-const Header = () => (
-  <View style={styles.headerContainer}>
-    <Text style={styles.headerTitle}>小鹅通店铺Demo</Text>
-  </View>
-);
-
 // SDK参数
 const XEShopSDKParams = {
   appId: 'app38itOR341547',
@@ -51,9 +30,33 @@ const XEShopSDKParams = {
   shopUrl: 'https://apprnDA0ZDw4581.sdk.xiaoe-tech.com',
 };
 
+const App = () =>{
+  return <View>
+  <StatusBar barStyle="dark-content" />
+      <SafeAreaView>
+        <ScrollView
+          contentInsetAdjustmentBehavior="automatic"
+          style={styles.scrollView}>
+          <View style={styles.body}>
+          <View style={styles.headerContainer}>
+            <Text style={styles.headerTitle}>小鹅通店铺Demo</Text>
+            </View>
+            <XEShopSDKDemo />
+          </View>
+        </ScrollView>
+      </SafeAreaView>
+      </View>
+}
+
 // SDK组件
 class XEShopSDKDemo extends Component {
-  state = {sdkVersion: 'unknown'};
+
+  constructor(props) {
+    super(props)
+    this.state = {
+      sdkVersion:  'unknown'
+    }
+  }
 
   render() {
     return (
@@ -82,6 +85,41 @@ class XEShopSDKDemo extends Component {
       isOpenLog: true,
     });
 
+    this.bindEvent()
+
+    this.setUI()
+
+  }
+
+  componentWillUnmount() {
+    // 取消监听SDK事件回调
+    this.eventEmitter.remove();
+  }
+
+  setUI() {
+    // 设置样式
+    XEShopSDK.setNavStyle({
+      titleColor: '#333333',
+      titleFontSize: 18,
+      backgroundColor: '#eeeeee',
+      // backIconImageName: '',
+      // closeIconImageName: '',
+      // shareIconImageName: '',
+    });
+
+    // 设置标题
+    this._setTitle('小鹅通店铺Demo');
+
+    // 获取SDK版本信息
+    XEShopSDK.getSdkVersion().then(version => {
+      this.setState({
+        sdkVersion: version,
+      });
+    });
+
+  }
+
+  bindEvent() {
     // 监听SDK事件回调
     const eventEmitter = new NativeEventEmitter(XEShopSDK);
     this.eventEmitter = eventEmitter.addListener(
@@ -111,31 +149,6 @@ class XEShopSDKDemo extends Component {
         }
       },
     );
-
-    // 设置样式
-    XEShopSDK.setNavStyle({
-      titleColor: '#333333',
-      titleFontSize: 18,
-      backgroundColor: '#eeeeee',
-      // backIconImageName: '',
-      // closeIconImageName: '',
-      // shareIconImageName: '',
-    });
-
-    // 设置标题
-    this._setTitle('小鹅通店铺Demo');
-
-    // 获取SDK版本信息
-    XEShopSDK.getSdkVersion().then(version => {
-      this.setState({
-        sdkVersion: version,
-      });
-    });
-  }
-
-  componentWillUnmount() {
-    // 取消监听SDK事件回调
-    this.eventEmitter.remove();
   }
 
   // 设置标题
