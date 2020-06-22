@@ -1,41 +1,24 @@
-// Top-level build file where you can add configuration options common to all sub-projects/modules.
+apply plugin: 'com.android.library'
 
-buildscript {
-    ext {
-        buildToolsVersion = "28.0.3"
-        minSdkVersion = 16
-        compileSdkVersion = 28
-        targetSdkVersion = 28
-    }
-    repositories {
-        google()
-        jcenter()
-    }
-    dependencies {
-        classpath("com.android.tools.build:gradle:3.4.2")
+android {
+    compileSdkVersion 28
 
-        // NOTE: Do not place your application dependencies here; they belong
-        // in the individual module build.gradle files
+    defaultConfig {
+        minSdkVersion 16
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0.0"
+
+        consumerProguardFiles 'consumer-rules.pro'
     }
 }
 
-allprojects {
-    repositories {
-        mavenLocal()
-        maven {
-            // All of React Native (JS, Obj-C sources, Android binaries) is installed from npm
-            url("$rootDir/../node_modules/react-native/android")
-        }
-        maven {
-            // Android JSC is installed from npm
-            url("$rootDir/../node_modules/jsc-android/dist")
-        }
+dependencies {
+    // RN接口层
+    implementation "com.facebook.react:react-native:+"
 
-        google()
-        jcenter()
-        maven { url 'https://jitpack.io' }
+    // XEShopSDK
+    implementation 'com.xiaoe.shop:webcore:1.1.6'
 
-        // XEShopSDK
-        maven { url "https://dl.bintray.com/xiaoeteam/xiaoeSDK" }
-    }
+    implementation 'com.android.support:appcompat-v7:28.0.0'
 }
