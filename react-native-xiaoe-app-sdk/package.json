@@ -1,0 +1,23 @@
+{
+  "name": "react-native-xiaoe-app-sdk",
+  "version": "0.1.1",
+  "private": false,
+  "description": "小鹅通APP内嵌SDK React Native 组件",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "xiaoe",
+    "shop",
+    "小鹅通",
+    "小鹅通APP内嵌SDK"
+  ],
+  "author": "xiaoeteam",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://talkcheap.xiaoeknow.com/demo/XiaoeAppSDK-ReactNative.git"
+  },
+  "homepage": "https://github.com/xiaoeteam/XiaoeAppSDK-ReactNative"
+}
