@@ -1,0 +1,11 @@
+{
+  "name": "react-native-xiaoe-sdk",
+  "version": "0.0.2",
+  "description": "xiaoe sdk",
+  "main": "index.js",
+  "scripts": {
+    "test": ""
+  },
+  "author": "xiaoe",
+  "license": "ISC"
+}

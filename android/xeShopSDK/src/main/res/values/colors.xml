@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="mo_xeshopsdk_color_black">#000000</color>
+    <color name="mo_xeshopsdk_color_white">#ffffff</color>
+    <color name="mo_xeshopsdk_color_title_bar_bg">#eeeeee</color>
+</resources>

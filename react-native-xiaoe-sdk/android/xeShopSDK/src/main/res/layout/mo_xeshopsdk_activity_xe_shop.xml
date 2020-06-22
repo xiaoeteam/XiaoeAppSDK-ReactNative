@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/xe_sdk_title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/mo_xeshopsdk_title_bar_height"
+        android:background="@color/mo_xeshopsdk_color_title_bar_bg">
+
+        <ImageView
+            android:id="@+id/xe_sdk_back_img"
+            android:layout_width="@dimen/mo_xeshopsdk_icon_size"
+            android:layout_height="@dimen/mo_xeshopsdk_icon_size"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/mo_xeshopsdk_icon_padding"
+            tools:src="@mipmap/mo_xeshopsdk_back_icon" />
+
+        <ImageView
+            android:id="@+id/xe_sdk_close_img"
+            android:layout_width="@dimen/mo_xeshopsdk_icon_size"
+            android:layout_height="@dimen/mo_xeshopsdk_icon_size"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@+id/xe_sdk_back_img"
+            android:layout_toRightOf="@+id/xe_sdk_back_img"
+            android:padding="@dimen/mo_xeshopsdk_icon_padding"
+            tools:src="@mipmap/mo_xeshopsdk_close_icon" />
+
+        <TextView
+            android:id="@+id/xe_sdk_title_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textColor="@color/mo_xeshopsdk_color_black"
+            android:textSize="@dimen/mo_xeshopsdk_title_font_size"
+            android:maxWidth="@dimen/mo_xeshopsdk_title_max_width"
+            android:lines="1"
+            android:ellipsize="end"
+            tools:text="XEShopSDK6666666666666666666" />
+
+        <ImageView
+            android:id="@+id/xe_sdk_share_img"
+            android:layout_width="@dimen/mo_xeshopsdk_icon_size"
+            android:layout_height="@dimen/mo_xeshopsdk_icon_size"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/mo_xeshopsdk_icon_padding"
+            tools:src="@mipmap/mo_xeshopsdk_share_icon" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/web_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>
