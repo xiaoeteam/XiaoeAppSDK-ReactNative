@@ -18,11 +18,11 @@ import com.xiaoe.shop.sdk.rn.internal.RNUtils;
 import com.xiaoe.shop.sdk.rn.internal.XEShopDecoration;
 import com.xiaoe.shop.sdk.rn.internal.XEShopEventEmitter;
 import com.xiaoe.shop.sdk.rn.internal.XEShopModel;
-import com.xiaoe.shop.webcore.XEToken;
-import com.xiaoe.shop.webcore.XiaoEWeb;
-import com.xiaoe.shop.webcore.bridge.JsBridgeListener;
-import com.xiaoe.shop.webcore.bridge.JsCallbackResponse;
-import com.xiaoe.shop.webcore.bridge.JsInteractType;
+import com.xiaoe.shop.webcore.core.XEToken;
+import com.xiaoe.shop.webcore.core.XiaoEWeb;
+import com.xiaoe.shop.webcore.core.bridge.JsBridgeListener;
+import com.xiaoe.shop.webcore.core.bridge.JsCallbackResponse;
+import com.xiaoe.shop.webcore.core.bridge.JsInteractType;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -94,7 +94,7 @@ public class XEShopSDKModule extends ReactContextBaseJavaModule implements Lifec
             return;
         }
 
-        XiaoEWeb.init(getReactApplicationContext(), appId, clientId);
+        XiaoEWeb.init(getReactApplicationContext(), appId, clientId, XiaoEWeb.WebViewType.X5);
         XiaoEWeb.isOpenLog(isOpenLog);
         promise.resolve(null);
     }

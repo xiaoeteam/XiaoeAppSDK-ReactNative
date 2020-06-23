@@ -1,7 +1,8 @@
 package com.xiaoe.shop.sdk.rn.internal;
 
-import com.xiaoe.shop.webcore.bridge.JsBridgeListener;
-import com.xiaoe.shop.webcore.bridge.JsCallbackResponse;
+
+import com.xiaoe.shop.webcore.core.bridge.JsBridgeListener;
+import com.xiaoe.shop.webcore.core.bridge.JsCallbackResponse;
 
 public class XEShopEventEmitter implements JsBridgeListener {
     private static volatile XEShopEventEmitter sInstance = new XEShopEventEmitter();
@@ -24,7 +25,7 @@ public class XEShopEventEmitter implements JsBridgeListener {
     }
 
     @Override
-    public void onJsInteract(int action, JsCallbackResponse jsCallbackResponse) {
-        mListener.onJsInteract(action, jsCallbackResponse);
+    public void onJsInteract(int actionType, JsCallbackResponse response) {
+        mListener.onJsInteract(actionType, response);
     }
 }

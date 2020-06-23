@@ -22,8 +22,8 @@ import com.xiaoe.shop.sdk.rn.internal.XELiveData;
 import com.xiaoe.shop.sdk.rn.internal.XEShopDecoration;
 import com.xiaoe.shop.sdk.rn.internal.XEShopEventEmitter;
 import com.xiaoe.shop.sdk.rn.internal.XEShopModel;
-import com.xiaoe.shop.webcore.XEToken;
-import com.xiaoe.shop.webcore.XiaoEWeb;
+import com.xiaoe.shop.webcore.core.XEToken;
+import com.xiaoe.shop.webcore.core.XiaoEWeb;
 
 public class XEShopActivity extends AppCompatActivity {
     public static String EXTRA_SHOP_URL = "shop_url";
@@ -37,7 +37,6 @@ public class XEShopActivity extends AppCompatActivity {
         if (context == null || TextUtils.isEmpty(shopUrl)) {
             return false;
         }
-
         Intent intent = new Intent(context, XEShopActivity.class);
         intent.putExtra(EXTRA_SHOP_URL, shopUrl);
 
@@ -182,7 +181,7 @@ public class XEShopActivity extends AppCompatActivity {
     protected void onResume() {
         super.onResume();
         if (mXiaoEWeb != null) {
-            mXiaoEWeb.webLifeCycle().onResume();
+            mXiaoEWeb.onResume();
         }
     }
 
@@ -190,7 +189,7 @@ public class XEShopActivity extends AppCompatActivity {
     protected void onPause() {
         super.onPause();
         if (mXiaoEWeb != null) {
-            mXiaoEWeb.webLifeCycle().onPause();
+            mXiaoEWeb.onPause();
         }
     }
 
@@ -201,7 +200,7 @@ public class XEShopActivity extends AppCompatActivity {
         XEShopModel.getInstance().title.removeObserver();
 
         if (mXiaoEWeb != null) {
-            mXiaoEWeb.webLifeCycle().onDestroy();
+            mXiaoEWeb.onDestroy();
         }
     }
 

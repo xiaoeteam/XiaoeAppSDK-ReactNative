@@ -1,6 +1,7 @@
 package com.xiaoe.shop.sdk.rn.internal;
 
-import com.xiaoe.shop.webcore.XEToken;
+
+import com.xiaoe.shop.webcore.core.XEToken;
 
 public class XEShopModel {
     public XELiveData<XEToken> token = new XELiveData<>();
