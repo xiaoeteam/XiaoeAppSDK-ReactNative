@@ -5069,8 +5069,10 @@ react-is@^16.12.0, react-is@^16.8.1, react-is@^16.8.4, react-is@^16.9.0:
   resolved "https://registry.npm.taobao.org/react-is/download/react-is-16.13.0.tgz?cache=0&sync_timestamp=1583281679066&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Freact-is%2Fdownload%2Freact-is-16.13.0.tgz#0f37c3613c34fe6b37cd7f763a0d6293ab15c527"
   integrity sha1-DzfDYTw0/ms3zX92Og1ik6sVxSc=
 
-react-native-xiaoe-sdk@/Users/eli/Desktop/xiaoe/XiaoeAppSDK-ReactNative/react-native-xiaoe-sdk:
-  version "0.0.2"
+react-native-xiaoe-app-sdk@0.2.2:
+  version "0.2.2"
+  resolved "https://registry.yarnpkg.com/react-native-xiaoe-app-sdk/-/react-native-xiaoe-app-sdk-0.2.2.tgz#a56e9e1f8c6223ceea41a58b63fce6e12b29a44d"
+  integrity sha512-zhKd2vY43epcB9BxC6171MMrb4EV/IOVJFkK4WWSR0riYL2ZSRAkukyhfgrW57ObS6qPzRuIkigmmYRPij8DfQ==
 
 react-native@0.61.5:
   version "0.61.5"

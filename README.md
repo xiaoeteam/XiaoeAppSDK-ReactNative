@@ -6,13 +6,13 @@
 在工程 package.json 中加入 react-native-xiaoe-sdk：
 
 ```
-yarn add react-native-xiaoe-sdk
+yarn add react-native-xiaoe-app-sdk
 ```
 
 或 npm依赖
 
 ```
-npm install react-native-xiaoe-sdk
+npm install react-native-xiaoe-app-sdk
 ```
 
 ### iOS
