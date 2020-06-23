@@ -1,6 +1,24 @@
 # React Native API文档
 
 
+## Installing
+1. Install library from npm or yarn
+```
+npm install react-native-xiaoe-app-sdk
+```
+```
+yarn add react-native-xiaoe-app-sdk
+```
+
+2. link native code
+react-native 0.60+
+```
+cd ios && pod install
+```
+Pre 0.60
+```
+react-native link react-native-xiaoe-app-sdk
+```
 
 ## 模块名称
 

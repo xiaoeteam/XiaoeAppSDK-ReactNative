@@ -1,6 +1,6 @@
 {
   "name": "react-native-xiaoe-app-sdk",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "private": false,
   "description": "小鹅通APP内嵌SDK React Native 组件",
   "main": "index.js",
