@@ -21,7 +21,7 @@ import {
 
 import {Colors} from 'react-native/Libraries/NewAppScreen';
 
-import XEShopSDK from 'react-native-xiaoe-sdk';
+import XEShopSDK from 'react-native-xiaoe-app-sdk';
 
 // SDK参数
 const XEShopSDKParams = {

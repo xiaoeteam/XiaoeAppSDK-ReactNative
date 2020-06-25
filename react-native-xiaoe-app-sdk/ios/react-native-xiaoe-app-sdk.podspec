@@ -6,9 +6,9 @@ Pod::Spec.new do |s|
   s.version       = package["version"]
   s.summary       = package['description']
   s.requires_arc  = true
-  s.author        = { 'dzhuowen' => 'dzhuowen@fb.com' }
+  s.author        = { 'david' => '337581468@qq.com' }
   s.license       = package["license"]
-  s.homepage      = 'https://www.npmjs.com/package/react-native-xiaoe-sdk'
+  s.homepage      = 'https://www.npmjs.com/package/react-native-xiaoe-app-sdk'
   s.source        = { :git => '' }
   s.platform      = :ios, '7.0'
   s.dependency    'React'
