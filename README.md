@@ -22,3 +22,7 @@ cd ios && pod install
 react-native link react-native-xiaoe-app-sdk
 ```
 
+详细使用
+
+* [详细使用](https://github.com/xiaoeteam/XiaoeAppSDK-ReactNative/wiki)
+
