@@ -97,3 +97,5 @@ XEShopSDK
 - 获取SDK版本
 - 返回Promise对象用于异步返回SDK版本
 - Promise.resolve(string ret)  返回SDK版本
+
+# [详细使用](https://github.com/xiaoeteam/XiaoeAppSDK-ReactNative/wiki)

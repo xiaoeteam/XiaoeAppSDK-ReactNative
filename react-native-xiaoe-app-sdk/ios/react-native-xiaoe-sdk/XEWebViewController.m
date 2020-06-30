@@ -44,9 +44,11 @@
   self.view.backgroundColor = [UIColor whiteColor];
   
   CGFloat navHeight = 64;
+  CGFloat navBottom = 0;
   if ([UIScreen mainScreen].bounds.size.height >= 812
       && [UIScreen mainScreen].bounds.size.height < 1024) {
     navHeight = 88;
+    navBottom = 34;
   }
   
   CGFloat statusHeight = UIApplication.sharedApplication.statusBarFrame.size.height;
@@ -122,7 +124,7 @@
     title.font = [UIFont systemFontOfSize:_titleFontSize];
   }
   
-  CGRect webFrame = CGRectMake(0, navHeight, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height - navHeight);
+  CGRect webFrame = CGRectMake(0, navHeight, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height - navHeight - navBottom);
   UIView *contentView = [[UIView alloc] initWithFrame:webFrame];
   [self.view addSubview:contentView];
   
@@ -137,10 +139,7 @@
 }
 
 - (UIImage *)getImage:(NSString *)imageName {
-  
-  NSString *name = [[NSString alloc] initWithFormat:@"Frameworks/App.framework/flutter_assets/images/ios/%@",[self getImageName:imageName]];
-  NSString *imagePath = [[NSBundle mainBundle] pathForResource:name ofType:@"png"];
-  return [UIImage imageWithContentsOfFile:imagePath];
+    return [UIImage imageNamed:imageName];
 }
 
 
