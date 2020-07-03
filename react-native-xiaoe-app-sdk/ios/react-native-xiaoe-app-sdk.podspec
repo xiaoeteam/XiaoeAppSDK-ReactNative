@@ -12,7 +12,7 @@ Pod::Spec.new do |s|
   s.source        = { :git => '' }
   s.platform      = :ios, '7.0'
   s.dependency    'React'
-  s.dependency    'XEShopSDK', '2.0.6'
+  s.dependency    'XEShopSDK', '2.0.7'
   s.source_files = 'react-native-xiaoe-sdk/*.{h,m}'
   s.resources    = 'react-native-xiaoe-sdk/*.{bundle}'
 
